@@ -36,7 +36,7 @@ module Rails3JQueryAutocomplete
 
     protected
     def autocompleted_string_input(method, options)
-      self.label(method, options_for_label(options)) << autocomplete_field(method, options.delete(:url), options)
+      self.label(method, options.delete(:label_html)) << autocomplete_field(method, options.delete(:url), options.delete(:input_html))
     end
   end
 end
